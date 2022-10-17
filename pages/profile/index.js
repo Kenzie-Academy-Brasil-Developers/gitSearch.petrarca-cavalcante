@@ -7,6 +7,7 @@ const profileFigure = document.querySelector(".profile-figure")
 const profileInfos = document.querySelector(".profile-infos")
 const repositoriesFeed = document.querySelector(".projects-feed")
 
+
 function headerAssembly(userData) {
     const profileImg = document.createElement('Img')
     const profileName = document.createElement('h3')
@@ -27,23 +28,30 @@ fetch(helloAgain.repos_url)
     })
     .then((responseJson) => {
         responseJson.map((repository) => {
-        const repoCard = document.createElement('div')
-        const name = document.createElement('h4')
-        const repoDescriptionbox = document.createElement('div')
-        const description = document.createElement('p')
-        const repoButtonsBox = document.createElement('div')
-        const openBtn = document.createElement('button')
-        const demoBtn = document.createElement('button')
+            const repoCard = document.createElement('div')
+            const name = document.createElement('h4')
+            const repoDescriptionbox = document.createElement('div')
+            const description = document.createElement('p')
+            const repoButtonsBox = document.createElement('div')
+            const openBtn = document.createElement('button')
+            const demoBtn = document.createElement('button')
 
-        name.innerText = repository.name
-        description.innerText = repository.full_name
+            name.innerText = repository.name
+            description.innerText = repository.full_name
 
 
-        repoDescriptionbox.append(description)
-        repoButtonsBox.append(openBtn, demoBtn)
-        repoCard.append(name, repoDescriptionbox, repoButtonsBox)
-        repositoriesFeed.append(repoCard)
+            repoDescriptionbox.append(description)
+            repoButtonsBox.append(openBtn, demoBtn)
+            repoCard.append(name, repoDescriptionbox, repoButtonsBox)
+            repositoriesFeed.append(repoCard)
+        })
     })
-    })
 
-    
+
+
+
+const changeUserBtn = document.querySelector(".change-user")
+    changeUserBtn.addEventListener('click', (event) => {
+        event.preventDefault()
+        // location.replace('.../home.html')
+    })

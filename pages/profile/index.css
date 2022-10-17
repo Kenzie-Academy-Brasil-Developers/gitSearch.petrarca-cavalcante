@@ -1,5 +1,5 @@
 body {
-    background-color: var(--color-grey-1);
+    background-color: var(--color-grey-2);
     color: var(--color-grey-7);
 }
 
@@ -17,4 +17,8 @@ figure{
     border-radius: 4rem;
     overflow: hidden;
     border: 3px solid var(--color-brand-2);
+}
+
+main {
+    padding:  0 20%;
 }
