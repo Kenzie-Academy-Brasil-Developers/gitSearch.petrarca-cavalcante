@@ -46,14 +46,18 @@ section div {
     color: var(--color-grey-7);
     border: none;
     padding: 15px;
+    border-radius: 4px;
 }
 
 .view-profile-btn {
     height: 39px;
     background-color: var(--color-brand-2);
+    border: 1px solid transparent;
     color: var(--color-grey-7);
+    font-weight: 100;
     opacity: 50%;
     transition: ease .4s;
+    border-radius: 4px;
 }
 
 .filled-search {

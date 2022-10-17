@@ -44,7 +44,7 @@ function searchReturn(userData) {
         inputContainer.append(failAdvice)
 
     } else {
-        // location.replace('./pages/profile/index.html')
+        location.replace('./pages/profile/index.html')
     }
 
 }
