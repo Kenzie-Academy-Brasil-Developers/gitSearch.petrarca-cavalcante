@@ -60,5 +60,5 @@ fetch(helloAgain.repos_url)
 const changeUserBtn = document.querySelector(".change-user")
     changeUserBtn.addEventListener('click', (event) => {
         event.preventDefault()
-        // location.replace('.../home.html')
+        location.replace('/index.html')
     })
