@@ -14,8 +14,9 @@ function headerAssembly(userData) {
 
     profileImg.src = userData.avatar_url
     profileName.innerText = userData.name
-    profileStack.innerText = userData.name
+    profileStack.innerText = userData.company
 
-    profileCard.append()
+    profileFigure.append(profileImg)
+    profileInfos.append(profileName, profileStack)
 }
 headerAssembly(helloAgain)
