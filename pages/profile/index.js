@@ -37,9 +37,13 @@ fetch(helloAgain.repos_url)
             const demoBtn = document.createElement('button')
 
             repoCard.classList.add("repo-card")
+            repoButtonsBox.classList.add("repo-buttons")
 
             name.innerText = repository.name
             description.innerText = repository.full_name
+            openBtn.innerText = "Repositório"
+            demoBtn.innerText = "Demo"
+
 
             repoDescriptionbox.append(description)
             repoButtonsBox.append(openBtn, demoBtn)
