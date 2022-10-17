@@ -28,7 +28,7 @@ fetch(helloAgain.repos_url)
     })
     .then((responseJson) => {
         responseJson.map((repository) => {
-            const repoCard = document.createElement('div')
+            const repoCard = document.createElement('li')
             const name = document.createElement('h4')
             const repoDescriptionbox = document.createElement('div')
             const description = document.createElement('p')
@@ -36,9 +36,10 @@ fetch(helloAgain.repos_url)
             const openBtn = document.createElement('button')
             const demoBtn = document.createElement('button')
 
+            repoCard.classList.add("repo-card")
+
             name.innerText = repository.name
             description.innerText = repository.full_name
-
 
             repoDescriptionbox.append(description)
             repoButtonsBox.append(openBtn, demoBtn)

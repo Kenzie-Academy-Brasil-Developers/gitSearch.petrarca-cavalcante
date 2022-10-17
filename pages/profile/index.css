@@ -3,22 +3,49 @@ body {
     color: var(--color-grey-7);
 }
 
+li {
+    list-style: none;
+}
+
 header {
     display: flex;
-    padding: 50px 200px;
+    padding: 50px 310px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.profile-card{
+header button {
+    height: 35px;
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-grey-7);
+    background-color: var(--color-brand-2);
+    margin: 0 0 0 8px;
+}
+
+.change-user {
+    background-color: var(--color-grey-4);
+}
+
+
+.profile-card {
     display: flex;
+    gap: 12px;
 }
 
-figure{
-    width: 100px;
+.profile-infos {
+    padding-top: 10px;
+}
+
+figure {
+    width: 85px;
     border-radius: 4rem;
     overflow: hidden;
     border: 3px solid var(--color-brand-2);
 }
 
 main {
-    padding:  0 20%;
+    padding: 0 300px;
 }
