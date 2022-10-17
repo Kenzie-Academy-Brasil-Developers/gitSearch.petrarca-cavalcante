@@ -11,14 +11,16 @@ const repositoriesFeed = document.querySelector(".projects-feed")
 function headerAssembly(userData) {
     const profileImg = document.createElement('Img')
     const profileName = document.createElement('h3')
-    const profileStack = document.createElement('p')
+    const bio = document.createElement('p')
+    const email = document.createElement('p')
 
     profileImg.src = userData.avatar_url
     profileName.innerText = userData.name
-    profileStack.innerText = userData.bio
+    bio.innerText = userData.bio
+    email.innerText = userData.email
 
     profileFigure.append(profileImg)
-    profileInfos.append(profileName, profileStack)
+    profileInfos.append(profileName, bio, email)
 }
 headerAssembly(helloAgain)
 
