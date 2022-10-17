@@ -1,1 +1,61 @@
-/* Desenvolva sua estilização aqui...*/
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(225, 208, 208, 0.542);
+}
+
+section {
+    height: 100%;
+    width: 50%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grey-7);
+    font-weight: 400;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 390px;
+}
+
+.introduce-section {
+    background-color: var(--color-brand-1)
+}
+.search-section{
+    background-color: var(--color-grey-1);
+    color: var(--color-grey-7);
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#search_input{
+    height: 39px;
+    background-color: var(--color-grey-2);
+    color: var(--color-grey-7);
+    border: none;
+    padding: 15px;
+}
+
+.view-profile-btn {
+    height: 39px;
+    background-color: var(--color-brand-2);
+    color: var(--color-grey-7);
+    opacity: 50%;
+    transition: ease .4s;
+}
+
+.filled-search {
+    opacity: 100%;
+}
