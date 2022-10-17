@@ -44,6 +44,9 @@ header button {
 
 figure {
     width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4rem;
     overflow: hidden;
     border: 3px solid var(--color-brand-2);
