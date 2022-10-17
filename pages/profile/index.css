@@ -1,3 +1,8 @@
+body {
+    background-color: var(--color-grey-1);
+    color: var(--color-grey-7);
+}
+
 header {
     display: flex;
     padding: 50px 200px;
