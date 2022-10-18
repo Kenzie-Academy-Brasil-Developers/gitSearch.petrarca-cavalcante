@@ -53,13 +53,54 @@ section div {
     height: 39px;
     background-color: var(--color-brand-2);
     border: 1px solid transparent;
-    color: var(--color-grey-7);
-    font-weight: 100;
     opacity: 50%;
     transition: ease .4s;
     border-radius: 4px;
+    position: relative;
 }
 
 .filled-search {
     opacity: 100%;
+    cursor: pointer;
+}
+
+.button-text {
+    color: var(--color-grey-7);
+    font-weight: 100;
+}
+
+.hidden-text {
+    color: transparent;
+    transition: 0s all;
+}
+
+.spinner-load .button-text {
+    display: none;
+    opacity: 0;
+}
+
+.spinner-load::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-spinner 1s ease infinite;
+}
+
+@keyframes button-spinner {
+    from {
+        transform: rotate(0turn) ;
+    }
+    
+    to {
+        transform: rotate(1turn);
+    }
 }

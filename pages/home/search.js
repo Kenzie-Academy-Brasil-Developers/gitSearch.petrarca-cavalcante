@@ -14,14 +14,19 @@ function searchReceive() {
             viewProfBtn.classList.add('filled-search')
             searchForm.addEventListener('submit', async (event) => {
                 event.preventDefault()
+                viewProfBtn.classList.add('spinner-load')
+                viewProfBtn.classList.add('hidden-text')
 
                 const callCatcher = `https://api.github.com/users/${searchInput.value}`
                 const rawData = await fetch(callCatcher)
                 const dataJson = await rawData.json();
 
+
                 if (dataJson.message == "Not Found") {
                     return searchReturn('Not Found')
                 }
+
+                
                 passValues(dataJson)
                 searchReturn(dataJson)
             })
@@ -32,6 +37,10 @@ searchReceive()
 
 const inputContainer = document.querySelector('.input-box')
 function searchReturn(userData) {
+    viewProfBtn.classList.remove('spinner-load')
+    viewProfBtn.classList.remove('hidden-text')
+
+
     inputContainer.innerText = ""
     searchInput.style.outline = "1px solid #212529"
     if (userData == "Not Found") {
