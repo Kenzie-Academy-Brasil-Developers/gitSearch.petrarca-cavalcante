@@ -3,14 +3,12 @@ const searchInput = document.getElementById('search_input')
 const viewProfBtn = document.querySelector('.view-profile-btn')
 
 function searchReceive() {
+    document.querySelector('.view-profile-btn').disabled = true         
     searchInput.addEventListener('input', (event) => {
-        if (searchInput.value == "") {
-            searchForm.addEventListener('submit', (event) => {
-                event.preventDefault()
-            })
+        if (searchInput.value == "") {  
             viewProfBtn.classList.remove('filled-search')
-
         } else {
+            document.querySelector('.view-profile-btn').disabled = false
             viewProfBtn.classList.add('filled-search')
             searchForm.addEventListener('submit', async (event) => {
                 event.preventDefault()
