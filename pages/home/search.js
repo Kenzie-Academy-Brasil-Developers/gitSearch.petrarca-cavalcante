@@ -62,29 +62,25 @@ function passValues(profile) {
 }
 
 function searchLog(lastProfile) {
-    const convert = JSON.stringify(lastProfile)
-    let storage = []
-    storage.push(convert)
-    if (storage.length > 3) {
-        storage.shift()
+    let threeSaves = []
+    const convert = JSON.stringify(threeSaves)
+
+    threeSaves.push(lastProfile)
+    if (threeSaves.length > 3) {
+        threeSaves.shift()
     }
-
-
-    // register.push(convertSave)
-    // const convertSave = JSON.stringify(lastProfile)
-
-    // console.log(register)
-    // localStorage.setItem("savedProfiles", convertSave)
+    localStorage.setItem("savedProfiles", threeSaves)
 }
 
 const seeAgainPlace = document.querySelector('.recently-searched')
-// function renderHistory() {
-//     const pullRequest = localStorage.getItem("savedProfiles")
-//     const recentlySearched = JSON.parse(pullRequest)
 
-//     if(pullRequest === null){
-//        return "" 
-//     }
+function renderHistory() {
+    const pullRequest = localStorage.getItem("savedProfiles")
+    const recentlySearched = JSON.parse(pullRequest)
+
+    if(pullRequest === null){
+       return "" 
+    }
 
 //     recentlySearched.forEach(element => {
 // // console.log(element)
@@ -100,5 +96,5 @@ const seeAgainPlace = document.querySelector('.recently-searched')
 //         historyFigure.append(historyPhoto)
 //         seeAgainPlace.append(historyFigure)
 //     });
-// }
-// renderHistory()
+}
+renderHistory()
