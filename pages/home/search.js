@@ -60,3 +60,23 @@ function passValues(profile) {
     const convert = JSON.stringify(profile)
     localStorage.setItem("profileSearched", convert)
 }
+
+function searchLog(lastProfile) {
+    const seeAgainPlace = document.querySelector('.recently-searched')
+    let register = []
+    
+    register.push(lastProfile)
+    if(register.length > 3){
+    register.shift(lastProfile)
+    }
+
+    register.map((element) => {
+        const figureCreator = document.createElement('figure')
+        const userPhoto = document.createElement('img')
+
+        figureCreator.classList.add('recent-photo-wrapper')
+        userPhoto.classList.add('recent-user-photo')
+
+        userPhoto.src = element.
+    })
+}

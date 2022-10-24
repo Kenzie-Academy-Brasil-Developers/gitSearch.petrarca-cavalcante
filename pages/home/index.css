@@ -104,3 +104,18 @@ section div {
         transform: rotate(1turn);
     }
 }
+
+.quick-comeback {
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+}
+.quick-comeback p {
+    width: fit-content;
+}
+
+.recently-searched {
+    width: 100%;
+}
