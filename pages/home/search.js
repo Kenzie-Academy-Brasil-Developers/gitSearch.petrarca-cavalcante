@@ -24,7 +24,7 @@ function searchReceive() {
                     return searchReturn('Not Found')
                 }
 
-                
+                searchLog(dataJson)
                 passValues(dataJson)
                 searchReturn(dataJson)
             })
@@ -51,7 +51,7 @@ function searchReturn(userData) {
         inputContainer.append(failAdvice)
 
     } else {
-        location.replace('./pages/profile/index.html')
+        // location.replace('./pages/profile/index.html')
     }
 
 }
@@ -62,21 +62,43 @@ function passValues(profile) {
 }
 
 function searchLog(lastProfile) {
-    const seeAgainPlace = document.querySelector('.recently-searched')
-    let register = []
-    
-    register.push(lastProfile)
-    if(register.length > 3){
-    register.shift(lastProfile)
+    const convert = JSON.stringify(lastProfile)
+    let storage = []
+    storage.push(convert)
+    if (storage.length > 3) {
+        storage.shift()
     }
 
-    register.map((element) => {
-        const figureCreator = document.createElement('figure')
-        const userPhoto = document.createElement('img')
 
-        figureCreator.classList.add('recent-photo-wrapper')
-        userPhoto.classList.add('recent-user-photo')
+    // register.push(convertSave)
+    // const convertSave = JSON.stringify(lastProfile)
 
-        userPhoto.src = element.
-    })
+    // console.log(register)
+    // localStorage.setItem("savedProfiles", convertSave)
 }
+
+const seeAgainPlace = document.querySelector('.recently-searched')
+// function renderHistory() {
+//     const pullRequest = localStorage.getItem("savedProfiles")
+//     const recentlySearched = JSON.parse(pullRequest)
+
+//     if(pullRequest === null){
+//        return "" 
+//     }
+
+//     recentlySearched.forEach(element => {
+// // console.log(element)
+//         const historyFigure = document.createElement('figure')
+//         const historyPhoto = document.createElement('img')
+        
+//         historyFigure.classList.add("searched-wrapper")
+//         historyPhoto.classList.add("searched-user-photo")
+        
+//         historyPhoto.img = element.avatar_url
+        
+        
+//         historyFigure.append(historyPhoto)
+//         seeAgainPlace.append(historyFigure)
+//     });
+// }
+// renderHistory()

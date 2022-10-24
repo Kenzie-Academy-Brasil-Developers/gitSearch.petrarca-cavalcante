@@ -108,14 +108,14 @@ section div {
 .quick-comeback {
     height: fit-content;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: fit-content;
+    
 }
 .quick-comeback p {
+    display: flex;
+    height: 20px;
     width: fit-content;
 }
 
 .recently-searched {
-    width: 100%;
+ width: 40%;
 }
